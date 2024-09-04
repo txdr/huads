@@ -20,7 +20,7 @@ const config = JSON.parse(
   ),
   { pages, text404 } = pkg,
   __dirname = path.resolve(),
-  port = 80,
+  port = 8080,
   app = express(),
   router = express.Router(),
   // bare = createBareServer("/bare/"),
@@ -131,5 +131,5 @@ app.use((req, res) => {
   res.status(404).send(paintSource(loadTemplates(text404)));
 });
 
-server.listen(port);
+server.listen(80);
 console.log('Holy Unblocker is listening on port ' + port + '.');
