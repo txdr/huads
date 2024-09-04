@@ -20,7 +20,7 @@ const config = JSON.parse(
   ),
   { pages, text404 } = pkg,
   __dirname = path.resolve(),
-  port = process.env.PORT || config.port,
+  port = 80,
   app = express(),
   router = express.Router(),
   // bare = createBareServer("/bare/"),
